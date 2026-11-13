@@ -1,0 +1,304 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Portfólio de Bernardo Ribeiro, estudante e desenvolvedor em formação."
+    />
+    <title>Bernardo Ribeiro | Portfólio</title>
+    <link rel="icon" href="/favicon.svg" />
+    <link rel="stylesheet" href="/style.css" />
+    <script>
+      const savedTheme = localStorage.getItem('portfolio-theme')
+      if (savedTheme) document.documentElement.dataset.theme = savedTheme
+    </script>
+  </head>
+  <body>
+    <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+    <header class="site-header">
+      <a class="pill-button resume-link" href="#contato">Currículo</a>
+
+      <button
+        class="mobile-toggle"
+        id="mobile-toggle"
+        type="button"
+        aria-label="Abrir menu"
+        aria-controls="main-nav"
+        aria-expanded="false"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="main-nav" id="main-nav" aria-label="Navegação principal">
+        <ul class="nav-list">
+          <li><a href="#inicio">Início</a></li>
+          <li><a href="#sobre">Sobre Mim</a></li>
+          <li class="work-menu">
+            <button
+              id="work-menu-button"
+              type="button"
+              aria-haspopup="true"
+              aria-expanded="false"
+              aria-controls="work-submenu"
+            >
+              Trabalhos
+              <span class="menu-caret" aria-hidden="true"></span>
+            </button>
+            <ul class="work-submenu" id="work-submenu">
+              <li><a href="#experiencia">Experiência</a></li>
+              <li><a href="#habilidades">Habilidades</a></li>
+              <li><a href="#projetos">Projetos</a></li>
+            </ul>
+          </li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
+
+      <button class="pill-button theme-toggle" id="theme-toggle" type="button">
+        Modo claro
+      </button>
+    </header>
+
+    <main id="conteudo">
+      <section class="hero section-wrap" id="inicio">
+        <div class="photo-placeholder parallax-item">
+         <img src="imagens/foto site.jpeg" class="ftperfil"> 
+        </div>
+        <div class="hero-copy">
+          <p>Olá! Meu nome é,</p>
+          <h1>
+            Bernardo<br />
+            Ribeiro <span>(dev.)</span>
+          </h1>
+          <p class="typing-line">
+            Eu desenvolvo <span id="typing-text" aria-live="polite"></span
+            ><span class="typing-cursor" aria-hidden="true">|</span>
+          </p>
+        </div>
+      </section>
+
+      <section class="about-grid section-wrap" id="sobre">
+        <article class="outlined-card about-card reveal">
+          <h2>Sobre Mim</h2>
+          <p>
+            Sou Bernardo Ribeiro, tenho 17 anos e estou no segundo ano do
+            Cotemig. Estou aprendendo a programar em C#, MySQL e JavaScript.
+            Também estou aprendendo a desenvolver sites com HTML e CSS.
+          </p>
+        </article>
+
+        <article class="outlined-card about-card reveal">
+          <h2>Objetivo profissional</h2>
+          <p>
+            Quero ampliar meus conhecimentos em tecnologia e transformar ideias
+            em experiências digitais. Tenho interesse em Engenharia de
+            Software, Análise e Desenvolvimento de Sistemas, Ciência da
+            Computação, Cibersegurança e Redes.
+          </p>
+        </article>
+      </section>
+
+      <section
+        class="outlined-card experience-section content-section reveal"
+        id="experiencia"
+      >
+        <h2 class="section-title">Experiência</h2>
+        <div class="timeline">
+          <article class="timeline-item">
+            <time datetime="2025-02">
+              <strong>2025</strong>
+              <span>Fev</span>
+            </time>
+            <p class="timeline-copy">
+              Entrei no Cotemig no 1º ano do ensino médio e comecei meus estudos
+              na área de tecnologia. Dessa forma, dei os primeiros passos na
+              programação.
+            </p>
+          </article>
+
+          <article class="timeline-item">
+            <time datetime="2026-02">
+              <strong>2026</strong>
+              <span>Fev</span>
+            </time>
+            <p class="timeline-copy">
+              Entrei para o 2º ano do Cotemig e comecei a estudar MySQL, HTML,
+              CSS, JavaScript e C#, aprofundando meu conhecimento em
+              programação.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section
+        class="outlined-card skills-section content-section reveal"
+        id="habilidades"
+      >
+        <h2 class="section-title">Habilidades</h2>
+        <div class="skills-grid">
+          <article class="folder"><span class="skill-badge csharp">C#</span></article>
+          <article class="folder"><span class="skill-badge html">HTML</span></article>
+          <article class="folder"><span class="skill-badge css">CSS</span></article>
+          <article class="folder"><span class="skill-badge js">JS</span></article>
+          <article class="folder"><span class="skill-badge mysql">MySQL</span></article>
+          <article class="folder"><span class="skill-badge windows">Windows</span></article>
+          <article class="folder"><span class="skill-badge linux">Linux</span></article>
+          <article class="folder"><span class="skill-badge portuguese">Português</span></article>
+          <article class="folder"><span class="skill-badge google">Google Sites</span></article>
+        </div>
+      </section>
+
+      <section
+        class="outlined-card projects-section content-section reveal"
+        id="projetos"
+      >
+        <h2 class="section-title">Projetos</h2>
+        <div class="projects-grid">
+          <article class="project-card">
+            <span class="project-number">01</span>
+            <h3>Tabela Periódica</h3>
+            <p>Tabela Periódica desenvolvida durante meus estudos.</p>
+            <button class="project-button" type="button" data-project="Tabela Periódica">
+              <a href="https://22500375.github.io/Tabela-Peri-dica/" target="_blank">
+                Ver detalhes
+              </a> 
+            </button>
+          </article>
+
+          <article class="project-card">
+            <span class="project-number">02</span>
+            <h3>Sistema em C#</h3>
+            <p>Aplicação de estudos com lógica de programação e orientação a objetos.</p>
+            <button class="project-button" type="button" data-project="Sistema em C#">
+              Ver detalhes
+            </button>
+          </article>
+
+          <article class="project-card">
+            <span class="project-number">03</span>
+            <h3>Banco de dados</h3>
+            <p>Modelagem e consultas em um banco de dados MySQL.</p>
+            <button class="project-button" type="button" data-project="Banco de dados">
+              Ver detalhes
+            </button>
+          </article>
+
+          <article class="project-card">
+            <span class="project-number">04</span>
+            <h3>Em desenvolvimento</h3>
+            <p>Um novo projeto será publicado em breve neste espaço.</p>
+            <button class="project-button" type="button" data-project="Em desenvolvimento">
+              Ver detalhes
+            </button>
+          </article>
+        </div>
+      </section>
+
+      <section class="contact-section section-wrap reveal" id="contato">
+        <div class="contact-intro">
+          <p class="eyebrow">Vamos conversar</p>
+          <h2>Entre em contato!</h2>
+          <p>
+            Preencha o formulário ao lado. Responderei assim que possível.
+          </p>
+          <ul class="contact-details">
+            <li><strong>Email:</strong> ribeirocarvalhobernardo@gmail.com</li>
+            <li><strong>Telefone:</strong> (31) 97118-1802</li>
+          </ul>
+        </div>
+
+        <form class="contact-form outlined-card" id="contact-form" novalidate>
+          <div class="form-field">
+            <label for="name">Nome</label>
+            <input
+              id="name"
+              name="name"
+              type="text"
+              minlength="3"
+              autocomplete="name"
+              placeholder="Digite seu nome"
+              required
+            />
+            <small class="field-error"></small>
+          </div>
+
+          <div class="form-field">
+            <label for="phone">Telefone</label>
+            <input
+              id="phone"
+              name="phone"
+              type="tel"
+              inputmode="numeric"
+              autocomplete="tel"
+              maxlength="15"
+              placeholder="(00) 00000-0000"
+              required
+            />
+            <small class="field-error"></small>
+          </div>
+
+          <div class="form-field">
+            <label for="email">Email</label>
+            <input
+              id="email"
+              name="email"
+              type="email"
+              autocomplete="email"
+              placeholder="seuemail@exemplo.com"
+              required
+            />
+            <small class="field-error"></small>
+          </div>
+
+          <div class="form-field form-field-full">
+            <label for="message">Mensagem</label>
+            <textarea
+              id="message"
+              name="message"
+              rows="6"
+              minlength="10"
+              placeholder="Escreva sua mensagem"
+              required
+            ></textarea>
+            <small class="field-error"></small>
+          </div>
+
+          <button class="submit-button" type="submit">Enviar mensagem</button>
+        </form>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div>
+        <strong>Bernardo Ribeiro</strong>
+        <p>Estudante e desenvolvedor em formação.</p>
+      </div>
+      <div class="footer-contact">
+        <a href="mailto:ribeirocarvalhobernardo@gmail.com">ribeirocarvalhobernardo@gmail.com</a>
+        <a href="tel:+5531971181802">(31) 97118-1802</a>
+      </div>
+      <p>&copy; <span id="current-year"></span> Bernardo Ribeiro.</p>
+    </footer>
+
+    <dialog class="modal" id="portfolio-modal" aria-labelledby="modal-title">
+      <div class="modal-content">
+        <button class="modal-close" id="modal-close" type="button" aria-label="Fechar">
+          ×
+        </button>
+        <p class="eyebrow" id="modal-eyebrow">Portfólio</p>
+        <h2 id="modal-title">Mensagem enviada!</h2>
+        <p id="modal-message">
+          Obrigado pelo contato. Responderei assim que possível.
+        </p>
+        <button class="modal-action" id="modal-action" type="button">Entendi</button>
+      </div>
+    </dialog>
+
+    <script type="module" src="/script.js"></script>
+  </body>
+</html>
